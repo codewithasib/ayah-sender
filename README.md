@@ -24,28 +24,27 @@ pip install ayah-sender
 Here is an example of how to use AyahSender:
 
 ```python
-from ayah_sender import AyahSender
+from ayah-sender import AyahSender
 import json
 
-ayah_sender = AyahSender()
+ayahSender = AyahSender()
 
 # Show available reciters
-reciters_dict = ayah_sender.reciter.show_reciters()
-formatted_dict = json.dumps(reciters_dict, indent=4)
-print(formatted_dict)
+reciters_dict = ayahSender.reciter.show_reciters()
+print(reciters_dict)
 
 # Fetch a single ayah's audio
-audio_data = ayah_sender.fetch_single_ayah(reciter_id=1, chapter_num=1, verse_num=1)
+audio_data = ayahSender.fetch_single_ayah(reciter_id=1, chapter_num=1, verse_num=1)
 
 # Save the single ayah audio
-output_file_path = ayah_sender.save_audio(audio_data, output_dir='.')
+output_file_path = ayahSender.save_audio(audio_data, output_dir='.')
 print(f"Audio saved at: {output_file_path}")
 
 # Merge multiple ayahs' audio
-merged_audio_data = ayah_sender.merge_ayahs(reciter_id=5, chapter_num=1, start_verse=1, end_verse=5)
+merged_audio_data = ayahSender.merge_ayahs(reciter_id=5, chapter_num=1, start_verse=1, end_verse=5)
 
 # Save the merged audio file
-output_file_path = ayah_sender.save_audio(merged_audio_data, output_dir='.')
+output_file_path = ayahSender.save_audio(merged_audio_data, output_dir='.')
 print(f"Audio saved at: {output_file_path}")
 ```
 
@@ -70,8 +69,8 @@ Saves the audio data to the specified directory.
 ## File Structure
 
 ```
-ayah_sender/
-├── ayah_sender/
+ayah-sender/
+├── ayah-sender/
 │   ├── __init__.py
 │   ├── main.py
 │   ├── reciter.py
@@ -87,11 +86,11 @@ The `reciters.csv` file contains the list of reciters. The `Reciter` class reads
 ## Example
 
 ```python
-from ayah_sender import AyahSender
+from ayah-sender import AyahSender
 
-ayah_sender = AyahSender()
-audio_data = ayah_sender.fetch_single_ayah(reciter_id=1, chapter_num=1, verse_num=1)
-ayah_sender.save_audio(audio_data, output_dir='.')
+ayahSender = AyahSender()
+audio_data = ayahSender.fetch_single_ayah(reciter_id=1, chapter_num=1, verse_num=1)
+ayahSender.save_audio(audio_data, output_dir='.')
 ```
 
 ## Contributing
