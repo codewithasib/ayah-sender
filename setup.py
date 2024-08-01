@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 setup(
-    name="ayah-sender",
+    name="ayah_sender",
     version="0.1.1",
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        'ayah-sender': ['reciters.csv'],
+        'ayah_sender': ['reciters.csv'],
     },
     install_requires=[
         "requests",

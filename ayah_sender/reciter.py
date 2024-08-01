@@ -17,7 +17,7 @@ class Reciter:
         """
         reciters_data = {}
         # Use the newer files API to access reciters.csv
-        reciters_csv_path = Path(files('ayah-sender') / 'reciters.csv')
+        reciters_csv_path = Path(files('ayah_sender') / 'reciters.csv')
         with reciters_csv_path.open('r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             for row in reader:
