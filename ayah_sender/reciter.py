@@ -1,4 +1,4 @@
-import csv
+import csv, json
 from pathlib import Path
 from importlib.resources import files
 
@@ -29,7 +29,8 @@ class Reciter:
         Returns the reciters_data
         :return:
         """
-        return self.reciters_data
+        formatted_reciters_data = json.dumps(self.reciters_data, indent=4)
+        return formatted_reciters_data
 
     def get_reciter_name(self, reciter_id):
         """
@@ -39,3 +40,4 @@ class Reciter:
         """
         reciter_id = str(reciter_id)
         return self.reciters_data[reciter_id]
+
