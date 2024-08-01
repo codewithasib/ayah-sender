@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 setup(
-    name="ayah_sender",
+    name="ayah-sender",
     version="0.1.2",
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        'ayah_sender': ['reciters.csv'],
+        'ayah-sender': ['reciters.csv'],
     },
     install_requires=[
         "requests",
@@ -16,7 +16,7 @@ setup(
     description="A package to get audio of a single verse or multiples verses from a Chapter of The Holy Quran",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url="https://github.com/codewithasib/ayah_sender",
+    url="https://github.com/codewithasib/ayah-sender",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
