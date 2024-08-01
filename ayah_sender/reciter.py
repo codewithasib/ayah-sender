@@ -1,5 +1,6 @@
 import csv
-import pkgutil
+from pathlib import Path
+from importlib.resources import files
 
 
 class Reciter:
@@ -7,7 +8,6 @@ class Reciter:
         """
         Constructor
         """
-        self.file_path = 'reciters.csv'
         self.reciters_data = self._read_reciters_data()
 
     def _read_reciters_data(self):
@@ -16,7 +16,9 @@ class Reciter:
         :return:
         """
         reciters_data = {}
-        with open(self.file_path, mode='r') as file:
+        # Use the newer files API to access reciters.csv
+        reciters_csv_path = Path(files('ayah_sender') / 'reciters.csv')
+        with reciters_csv_path.open('r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             for row in reader:
                 reciters_data[row['ID']] = row['Full Name']
@@ -37,10 +39,3 @@ class Reciter:
         """
         reciter_id = str(reciter_id)
         return self.reciters_data[reciter_id]
-
-
-if __name__ == '__main__':
-    reciter = Reciter()
-    name = reciter.get_reciter_name('46')
-    print(name)
-
