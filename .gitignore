@@ -6,5 +6,8 @@ ayah_sender.egg-info/
 build/
 dist/
 
+upgrade-notes/
+
 *.mp3
+*.png
 .pypirc

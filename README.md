@@ -4,7 +4,7 @@
 
 # AyahSender
 
-AyahSender is a Python package that allows you to fetch and merge audio of Quranic verses (ayahs) from various reciters. You can save these audio clips to your local directory for easy access and listening.
+AyahSender is a Python package that allows you to have `Quranic audio `and `images` easily.
 
 ## Features
 
@@ -12,6 +12,7 @@ AyahSender is a Python package that allows you to fetch and merge audio of Quran
 - Merge multiple ayahs into a single audio file.
 - Supports various reciters.
 - Saves audio files in MP3 format.
+- Save transparent .png file of an ayah
 
 ## Installation
 
@@ -59,26 +60,32 @@ merged_audio_data = ayahSender.merge_ayahs(reciter_id=5, chapter_num=1, start_ve
 
 # Save the merged audio file
 ayahSender.save_audio(merged_audio_data, output_dir='.')
+
+# Getting png image of an ayah
+ayahSender.get_image(chapter_num=2, verse_num=255, output_dir='ayah-png')
 ```
 
 ### Functions
 
 #### `get_total_verses_in_chapter(chapter_number)`
 
-Fetches the total number of verses in a given chapter.
+- Fetches the total number of verses in a given chapter.
 
 #### `get_single_ayah(reciter_id, chapter_num, verse_num)`
 
-Fetches a single ayah from a specified reciter, chapter, and verse.
+- Fetches a single ayah from a specified reciter, chapter, and verse.
 
 #### `merge_ayahs(reciter_id, chapter_num, start_verse, end_verse)`
 
-Fetches and merges a range of ayahs from a specified reciter and chapter.
+- Fetches and merges a range of ayahs from a specified reciter and chapter.
 
 #### `save_audio(audio_data, output_dir=".")`
 
-Saves the audio data to the specified directory.
+- Saves the audio data to the specified directory.
 
+#### `get_image(chapter_num, verse_num, output_dir='.')`
+
+- Fetches and saves png image of an ayah
 
 ## Reciters List
 
