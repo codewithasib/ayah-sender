@@ -109,9 +109,10 @@ For any queries, contact us at [dev.asib@proton.me](mailto:dev.asib@proton.me).
 
 ## Acknowledgement
 
-- [**everyayah.com**](https://everyayah.com/)
+- [**everyayah.com**](https://everyayah.com/)   - Jazahumullahu Khairan to them for the `audio files`.
+- [**Quran.com**](https://quran.com/)  - Jazahumullahu Khairan to them for the `API`.
 
-Jazahumullahu Khairan to them for the audio files.
+
 
 ---
 
