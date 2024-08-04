@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="" style="{max-height: 50px}" src="./img/ayah-sender-01.png">
+  <img alt="" style="{max-height: 50px}" src="./img/ayah-sender-v0.1.6.png">
 </p>
 
 # AyahSender
