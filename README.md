@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="" style="{max-height: 50px}" src="./img/ayah-sender-01.png">
+</p>
+
 # AyahSender
 
 AyahSender is a Python package that allows you to fetch and merge audio of Quranic verses (ayahs) from various reciters. You can save these audio clips to your local directory for easy access and listening.
@@ -14,7 +18,7 @@ AyahSender is a Python package that allows you to fetch and merge audio of Quran
 Install the package via pip:
 
 ```bash
-pip install ayah_sender
+pip install ayah-sender
 ```
 
 ## Usage
@@ -25,7 +29,6 @@ Here is an example of how to use AyahSender:
 
 ```python
 from ayah_sender import AyahSender
-import json
 
 ayahSender = AyahSender()
 
