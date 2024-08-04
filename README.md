@@ -3,6 +3,7 @@
 </p>
 
 # AyahSender
+[![Upload Python Package](https://github.com/codewithasib/ayah-sender/actions/workflows/python-publish.yml/badge.svg)](https://github.com/codewithasib/ayah-sender/actions/workflows/python-publish.yml)
 
 AyahSender is a Python package that allows you to have `Quranic audio `and `images` easily.
 
