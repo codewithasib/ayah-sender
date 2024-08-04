@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
     name="ayah_sender",
-    version="0.1.4",
+    version="0.1.5",
     packages=find_packages(),
     include_package_data=True,
     package_data={
@@ -13,7 +13,7 @@ setup(
     ],
     author="Asib Hossen",
     author_email="dev.asib@proton.me",
-    description="A package to get audio of a single verse or multiples verses from a Chapter of The Holy Quran",
+    description="Get audio of a single verse or multiples verses from a Chapter of The Holy Quran",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url="https://github.com/codewithasib/ayah-sender",

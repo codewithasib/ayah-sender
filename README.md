@@ -21,6 +21,18 @@ Install the package via pip:
 pip install ayah-sender
 ```
 
+## Requirements
+
+- `requests`
+- `pydub`
+- `ffmpeg` - PyDub requires `ffmpeg` to perform its operations. 
+
+Follow the articles to install ffmpeg on your system if you don't have it installed.
+
+- [Windows](https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/)
+- [Linux](https://www.geeksforgeeks.org/how-to-install-ffmpeg-in-linux/)
+- [MacOS](https://phoenixnap.com/kb/ffmpeg-mac)
+
 ## Usage
 
 ### Basic Usage
@@ -37,18 +49,16 @@ reciters_dict = ayahSender.reciter.show_reciters()
 print(reciters_dict)
 
 # Fetch a single ayah's audio
-audio_data = ayahSender.fetch_single_ayah(reciter_id=1, chapter_num=1, verse_num=1)
+audio_data = ayahSender.get_single_ayah(reciter_id=1, chapter_num=1, verse_num=1)
 
 # Save the single ayah audio
-output_file_path = ayahSender.save_audio(audio_data, output_dir='.')
-print(f"Audio saved at: {output_file_path}")
+ayahSender.save_audio(audio_data, output_dir='.')
 
 # Merge multiple ayahs' audio
 merged_audio_data = ayahSender.merge_ayahs(reciter_id=5, chapter_num=1, start_verse=1, end_verse=5)
 
 # Save the merged audio file
-output_file_path = ayahSender.save_audio(merged_audio_data, output_dir='.')
-print(f"Audio saved at: {output_file_path}")
+ayahSender.save_audio(merged_audio_data, output_dir='.')
 ```
 
 ### Functions
@@ -57,7 +67,7 @@ print(f"Audio saved at: {output_file_path}")
 
 Fetches the total number of verses in a given chapter.
 
-#### `fetch_single_ayah(reciter_id, chapter_num, verse_num)`
+#### `get_single_ayah(reciter_id, chapter_num, verse_num)`
 
 Fetches a single ayah from a specified reciter, chapter, and verse.
 
@@ -69,18 +79,6 @@ Fetches and merges a range of ayahs from a specified reciter and chapter.
 
 Saves the audio data to the specified directory.
 
-## File Structure
-
-```
-ayah-sender/
-├── ayah_sender/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── reciter.py
-│   ├── reciters.csv
-├── setup.py
-└── README.md
-```
 
 ## Reciters List
 
@@ -88,13 +86,7 @@ The `reciters.csv` file contains the list of reciters. The `Reciter` class reads
 
 ## Example
 
-```python
-from ayah_sender import AyahSender
-
-ayahSender = AyahSender()
-audio_data = ayahSender.fetch_single_ayah(reciter_id=1, chapter_num=1, verse_num=1)
-ayahSender.save_audio(audio_data, output_dir='.')
-```
+See [examples](examples) folder for examples.
 
 ## Contributing
 
@@ -108,6 +100,12 @@ Feel free to submit issues or pull requests. For major changes, please open an i
 
 For any queries, contact us at [dev.asib@proton.me](mailto:dev.asib@proton.me).
 
+## Acknowledgement
+
+- [**everyayah.com**](https://everyayah.com/)
+
+Jazahumullahu Khairan to them for the audio files.
+
 ---
 
-Enjoy using AyahSender for your Quranic audio needs!
+Enjoy using `AyahSender` for your Quranic audio needs!

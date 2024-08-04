@@ -25,7 +25,7 @@ class AyahSender:
         else:
             return 0
 
-    def fetch_single_ayah(self, reciter_id, chapter_num, verse_num):
+    def get_single_ayah(self, reciter_id, chapter_num, verse_num):
         """
         This function fetches a single ayah/verse from a chapter number.
         It takes the following parameters:
