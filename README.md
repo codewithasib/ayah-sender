@@ -2,10 +2,20 @@
   <img alt="" style="{max-height: 50px}" src="./img/ayah-sender-v0.1.6.png">
 </p>
 
-# AyahSender
-[![Upload Python Package](https://github.com/codewithasib/ayah-sender/actions/workflows/python-publish.yml/badge.svg)](https://github.com/codewithasib/ayah-sender/actions/workflows/python-publish.yml)
+<p align="center">
+    <a href="https://img.shields.io/github/issues/codewithasib/ayah-sender">
+        <img alt="issues" src="https://img.shields.io/github/issues/codewithasib/ayah-sender">
+    </a>
+    <a href="https://img.shields.io/github/license/codewithasib/ayah-sender">
+        <img alt="license" src="https://img.shields.io/github/license/codewithasib/ayah-sender">
+    </a>
+        <a href="https://github.com/codewithasib/ayah-sender/actions/workflows/python-publish.yml">
+        <img alt="actions" src="https://github.com/codewithasib/ayah-sender/actions/workflows/python-publish.yml/badge.svg">
+    </a>
+</p>
 
-AyahSender is a Python package that allows you to have `Quranic audio `and `images` easily.
+
+AyahSender is a Python package that allows you to have `Quranic audio` and `images` easily.
 
 ## Features
 
@@ -108,12 +118,10 @@ Feel free to submit issues or pull requests. For major changes, please open an i
 
 For any queries, contact us at [dev.asib@proton.me](mailto:dev.asib@proton.me).
 
-## Acknowledgement
+## Acknowledgements
 
 - [**everyayah.com**](https://everyayah.com/)   - Jazahumullahu Khairan to them for the `audio files`.
 - [**Quran.com**](https://quran.com/)  - Jazahumullahu Khairan to them for the `API`.
-
-
 
 ---
 
